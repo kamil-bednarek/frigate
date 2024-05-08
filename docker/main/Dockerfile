@@ -51,7 +51,7 @@ ARG DEBIAN_FRONTEND
 # Install OpenVino Runtime and Dev library
 COPY docker/main/requirements-ov.txt /requirements-ov.txt
 RUN apt-get -qq update \
-    && apt-get -qq install -y wget python3 python3-distutils \
+    && apt-get -qq install -y wget python3 python3-dev python3-distutils pkg-config libhdf5-dev gcc g++ make \
     && wget -q https://bootstrap.pypa.io/get-pip.py -O get-pip.py \
     && python3 get-pip.py "pip" \
     && pip install -r /requirements-ov.txt
@@ -130,6 +130,8 @@ RUN apt-get -qq update \
     && apt-get -qq install -y \
     python3.9 \
     python3.9-dev \
+    pkg-config \
+    libhdf5-dev \
     # opencv dependencies
     build-essential cmake git pkg-config libgtk-3-dev \
     libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
