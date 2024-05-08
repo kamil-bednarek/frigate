@@ -23,8 +23,9 @@ from frigate.util.services import (
     get_nvidia_gpu_stats,
     is_vaapi_amd_driver,
 )
-from frigate.version import VERSION
+# from frigate.version import VERSION
 
+VERSION = "13.2"
 
 def get_latest_version(config: FrigateConfig) -> str:
     if not config.telemetry.version_check:

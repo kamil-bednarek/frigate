@@ -67,12 +67,13 @@ from frigate.types import CameraMetricsTypes, PTZMetricsTypes
 from frigate.util.builtin import save_default_config
 from frigate.util.config import migrate_frigate_config
 from frigate.util.object import get_camera_regions_grid
-from frigate.version import VERSION
+# from frigate.version import VERSION
 from frigate.video import capture_camera, track_camera
 from frigate.watchdog import FrigateWatchdog
 
 logger = logging.getLogger(__name__)
 
+VERSION = "13.2"
 
 class FrigateApp:
     def __init__(self) -> None:

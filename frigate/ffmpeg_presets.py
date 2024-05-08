@@ -7,10 +7,11 @@ from typing import Any
 
 from frigate.const import FFMPEG_HWACCEL_NVIDIA, FFMPEG_HWACCEL_VAAPI
 from frigate.util.services import vainfo_hwaccel
-from frigate.version import VERSION
+# from frigate.version import VERSION
 
 logger = logging.getLogger(__name__)
 
+VERSION = "13.2"
 
 class LibvaGpuSelector:
     "Automatically selects the correct libva GPU."

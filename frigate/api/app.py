@@ -33,7 +33,9 @@ from frigate.util.builtin import (
     update_yaml_from_url,
 )
 from frigate.util.services import ffprobe_stream, restart_frigate, vainfo_hwaccel
-from frigate.version import VERSION
+# from frigate.version import VERSION
+
+VERSION = "13.2"
 
 logger = logging.getLogger(__name__)
 

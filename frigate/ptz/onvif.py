@@ -90,6 +90,11 @@ class OnvifController:
 
         profile = None
         for key, onvif_profile in enumerate(profiles):
+            # print(onvif_profile.VideoEncoderConfiguration)
+            # print(onvif_profile.PTZConfiguration)
+            # print(onvif_profile.PTZConfiguration.DefaultContinuousPanTiltVelocitySpace)
+            # print(onvif_profile.VideoEncoderConfiguration.Encoding)
+
             if (
                 onvif_profile.VideoEncoderConfiguration
                 and onvif_profile.VideoEncoderConfiguration.Encoding == "H264"
